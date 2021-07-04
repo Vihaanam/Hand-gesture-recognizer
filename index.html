@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hand gesture recognizer</title>
+        <link rel="icon" href="https://www.clipartkey.com/mpngs/m/5-55581_thumbs-up-emoji-no-background.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    </head>
+    <body style="background-color: aliceblue;">
+        <center>
+            <h1 class="btn-warning" style="width: fit-content; padding: 10px; letter-spacing: 5px; font-size: 40px; border-radius: 15px;">Hand gesture recognizer
+            <br><span>&#9996;</span>&nbsp;<span>&#128077;</span>&nbsp;<span>&#128078;</span></h1>
+            <br>
+            <br>
+            <h3 style="color: green;"><b>Very good?</b></h3>
+            <h3 style="color: red;"><b>Bad?</b></h3>
+            <h3 style="color: blue;"><b>Victory?</b></h3>
+            <br>
+            <br>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="margin-bottom: 10px;">
+                <label style="background-color: black; color: white; padding: 5px; border-radius: 10px;">Webcam:</label>
+                <br>
+                <div id="camera" style="border: 2px black dashed; height: 300px; width: 350px; background-color: white;"></div>
+                <br>
+                <br>
+                <button class="btn btn-primary" style="font-size: 20px !important;" onclick="take_snapshot()">Capture photo</button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="margin-bottom: 10px;">
+                <h3 style="background-color: black; border: 4px lightgray solid; border-radius: 20px; color: white; padding: 4px;">Prediction 1</h3>
+                <br>
+                <label id="emoji" style="font-size: 40px;"></label>
+                <br>
+                <label id="emoji_name" style="font-size: 30px;"></label>
+                <br>
+                <h3 style="background-color: black; border: 4px lightgray solid; border-radius: 20px; color: white; padding: 4px;">Prediction 2</h3>
+                <br>
+                <label id="emoji2" style="font-size: 40px;"></label>
+                <br>
+                <label id="emoji_name2" style="font-size: 30px;"></label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="margin-bottom: 10px;">
+                <label style="background-color: black; color: white; padding: 5px; border-radius: 10px;">Snapshot:</label>
+                <br>
+                <div id="photo_taken" style="border: 2px black dashed; height: 300px; width: 350px; background-color: white;"></div>
+                <br>
+                <br>
+                <button class="btn btn-success" style="font-size: 20px !important;" onclick="check()">Identify</button>
+            </div>
+        </center>
+        <script src="main.js"></script>
+    </body>
+</html>
